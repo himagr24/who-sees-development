@@ -1,0 +1,56 @@
+[
+  {
+    "id": "sensor",
+    "label": "Satellite sensor",
+    "short": "An instrument passes overhead at night.",
+    "known": "The VIIRS Day/Night Band records low levels of visible and near-infrared light from orbit, on a regular schedule, at roughly the same local time each night.",
+    "assumed": "That a pass at around the same hour each night is a fair sample of night-time light in the place.",
+    "lost": "Anything that happens at other times of night, under cloud, or below the sensor's sensitivity.",
+    "whoCanQuestion": "Instrument scientists and data providers; anyone who knows when the place is lit and when it is not."
+  },
+  {
+    "id": "radiance",
+    "label": "Recorded night-time radiance",
+    "short": "The sensor records how much light reaches it.",
+    "known": "A radiance value for each observation, in physical units, with flags for cloud, moonlight and other conditions.",
+    "assumed": "That light reaching the sensor mainly comes from the ground surface below, not from moonlight, aurora, or stray light.",
+    "lost": "The colour and source of light, which way it points, and whether it is blocked by trees or roofs.",
+    "whoCanQuestion": "Remote-sensing researchers; lighting engineers; people who know which lights are used here."
+  },
+  {
+    "id": "composite",
+    "label": "Processed annual composite / pixel value",
+    "short": "Many nights become one number per grid cell per year.",
+    "known": "The provider screens and combines many observations into an annual value for each ~500 m grid cell, following a documented method.",
+    "assumed": "That the screening removes noise without removing real light, and that methods are comparable across years.",
+    "lost": "Short events, seasonal patterns, and anything smaller than one grid cell. A year becomes a single average.",
+    "whoCanQuestion": "Data providers and independent analysts; anyone who can compare the composite with what happened during the year."
+  },
+  {
+    "id": "change",
+    "label": "Observed change over time",
+    "short": "Comparing years shows the value went up or down.",
+    "known": "The difference between annual values for the selected area, and which years had limited coverage.",
+    "assumed": "That the chosen area boundary, start year and end year are meaningful choices — not ones that happen to make a trend look larger or smaller.",
+    "lost": "Why the change happened. A rise and a dip-and-recovery can produce similar end points.",
+    "whoCanQuestion": "Anyone reviewing the analysis; people who lived through those years in this place."
+  },
+  {
+    "id": "interpretation",
+    "label": "Possible interpretation",
+    "short": "Someone proposes what the change might mean.",
+    "known": "Only that several explanations fit the same signal — see the alternative explanations below.",
+    "assumed": "That brighter means more activity, more services, or better lives. Research finds night lights relate more closely to electrification and electricity use than to household living standards.",
+    "lost": "Income, safety, dignity, access to services, local priorities, and whether the people living there would describe this as 'development' at all.",
+    "whoCanQuestion": "People living in and connected to the place, first. Then researchers, artists, ecologists, and public institutions."
+  },
+  {
+    "id": "decision",
+    "label": "Potential action or decision",
+    "short": "An institution may act on the interpretation.",
+    "known": "In practice, signals like this are sometimes used to prioritise investment, services, or attention.",
+    "assumed": "That the interpretation is correct, that the people affected agree, and that the decision-maker has the authority to act.",
+    "lost": "Consent, local knowledge, and the chance for people affected to say what they actually need.",
+    "whoCanQuestion": "The people the decision would affect — with access, explanation, and the authority to decide whether and how to respond."
+  }
+]

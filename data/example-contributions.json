@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ex-1",
+    "category": "question",
+    "text": "Does this map show whether the new light reaches homes, or only the main road?",
+    "contributorRole": "visitor",
+    "locationPrecision": "none",
+    "visibility": "public",
+    "evidenceStatus": "unreviewed",
+    "isIllustrative": true
+  },
+  {
+    "id": "ex-2",
+    "category": "local_context",
+    "text": "Power cuts are frequent in the evenings during summer, so an annual average may not reflect what people experience.",
+    "contributorRole": "resident",
+    "locationPrecision": "area",
+    "visibility": "facilitators_only",
+    "evidenceStatus": "unreviewed",
+    "isIllustrative": true
+  },
+  {
+    "id": "ex-3",
+    "category": "alternative_explanation",
+    "text": "The 2020 dip could relate to reduced activity during a lockdown rather than a change in infrastructure.",
+    "contributorRole": "researcher",
+    "locationPrecision": "none",
+    "visibility": "public",
+    "evidenceStatus": "unreviewed",
+    "isIllustrative": true
+  },
+  {
+    "id": "ex-4",
+    "category": "data_concern",
+    "text": "Who chose the boundary of this area? A different boundary might show a different trend.",
+    "contributorRole": "artist",
+    "locationPrecision": "none",
+    "visibility": "public",
+    "evidenceStatus": "unreviewed",
+    "isIllustrative": true
+  }
+]

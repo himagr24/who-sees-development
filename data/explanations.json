@@ -1,0 +1,44 @@
+[
+  {
+    "id": "electrification",
+    "title": "Electrification or construction",
+    "description": "New grid connections, new buildings, or expanded roads could add light.",
+    "investigate": "Who could say whether connections or building changed here, and over what years?",
+    "evidence": "local_investigation"
+  },
+  {
+    "id": "lighting-policy",
+    "title": "Lighting technology or public-lighting policy changed",
+    "description": "A switch to LED street lights, longer lighting hours, or a new lighting rule can change recorded brightness — up or down — without a change in activity.",
+    "investigate": "Were street lights replaced, or did lighting hours change, during this period?",
+    "evidence": "local_investigation"
+  },
+  {
+    "id": "outage-recovery",
+    "title": "Power outage, disaster, conflict, or recovery",
+    "description": "A dip followed by a rise could reflect disruption and recovery rather than steady growth.",
+    "investigate": "Did anything interrupt power or daily life in the year of the dip?",
+    "evidence": "local_investigation"
+  },
+  {
+    "id": "seasonal",
+    "title": "Seasonal or temporary activity",
+    "description": "Harvests, festivals, temporary camps, or construction sites can be bright for part of a year and still raise the annual value.",
+    "investigate": "Is light here steady through the year, or concentrated in certain months?",
+    "evidence": "local_investigation"
+  },
+  {
+    "id": "non-settlement",
+    "title": "Vehicle lights, fires, or other non-settlement light sources",
+    "description": "Highways, industrial sites, gas flares, and fires can all be recorded as night-time light.",
+    "investigate": "What lies inside the grid cells that changed most — homes, a road, a factory?",
+    "evidence": "data_consideration"
+  },
+  {
+    "id": "coverage",
+    "title": "Limited data coverage or processing difference",
+    "description": "Years with few cloud-free nights, or a change in product version or correction method, can shift values on their own.",
+    "investigate": "How many valid observations support each year, and did the processing change?",
+    "evidence": "data_consideration"
+  }
+]
