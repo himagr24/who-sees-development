@@ -43,9 +43,9 @@ Other content files:
 - `data/inference-chain.json` — the six steps of the chain.
 - `data/example-contributions.json` — keep `isIllustrative: true` unless a contribution is real, consented, and approved for use.
 
-## Design decisions / deviations from the README
+## Design decisions / deviations from the build brief
 
-- **No Leaflet map.** The README allows a static fallback. A tiled basemap would imply precision the demo data does not have and adds an external tile dependency, so the comparison is a labelled conceptual grid driven by JSON. Leaflet can be added once a verified area exists.
+- **No Leaflet map.** The build brief allows a static fallback. A tiled basemap would imply precision the demo data does not have and adds an external tile dependency, so the comparison is a labelled conceptual grid driven by JSON. Leaflet can be added once a verified area exists.
 - **No web fonts** — system serif/sans stacks, so builds work offline.
 - Contribution form clears its state on submit and makes no network request.
 - `npm audit` reports a PostCSS advisory inside Next 15's build tooling; it affects build-time CSS processing, not the static output. Upgrading to Next 16 resolves it.

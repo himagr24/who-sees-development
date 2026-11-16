@@ -217,4 +217,4 @@ Before applying, aim to have:
 - Earth Observation Group, VIIRS Nighttime Lights: https://eogdata.mines.edu/products/vnl/
 - NASA Black Marble User Guide: https://viirsland.gsfc.nasa.gov/PDF/BlackMarbleUserGuide_v1.2_20210421.pdf
 
-For implementation details, use `README.md`. For research evidence and community-centred design lessons, use `COMMUNITY_SATELLITE_RESEARCH.md`.
+For implementation details, use [`BUILD_BRIEF.md`](./BUILD_BRIEF.md). For research evidence and community-centred design lessons, use [`COMMUNITY_SATELLITE_RESEARCH.md`](./COMMUNITY_SATELLITE_RESEARCH.md).
