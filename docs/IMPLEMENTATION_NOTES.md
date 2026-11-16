@@ -16,7 +16,8 @@ No API keys, backend, database, or network calls at runtime.
 |---|---|
 | Interface, inference chain, knowledge layers, data-care rules | Real (prototype) |
 | Dataset/provider/sensor/resolution/unit description | Describes the *intended* source (EOG VIIRS VNL). Confirm against provider docs before publishing. |
-| Place, coordinates, series values, comparison grids, coverage labels | **Demo** — illustrative placeholders |
+| Place (Puerto Rico), period, sources, documented outage events | Real — selected and source-checked |
+| Series values, comparison grids, coverage labels | **Demo** — placeholders until `scripts/prepare_case_study.py` is run (see `docs/DATA_PREPARATION.md`) |
 | Example contributions | **Illustrative** — written for the prototype, not from real people |
 | References | Real links, copied from `PROTOTYPE_BRIEF.md` / `COMMUNITY_SATELLITE_RESEARCH.md` |
 
@@ -52,4 +53,4 @@ Other content files:
 
 ## Not yet built
 
-Data-preparation notebook/script, walkthrough video, deployment, and a printable data card.
+Running the data-preparation script on real data, walkthrough video, deployment, and a printable data card.

@@ -1,44 +1,52 @@
 [
   {
-    "id": "electrification",
-    "title": "Electrification or construction",
-    "description": "New grid connections, new buildings, or expanded roads could add light.",
-    "investigate": "Who could say whether connections or building changed here, and over what years?",
+    "id": "outage-recovery",
+    "title": "Power outage, disaster, or recovery",
+    "description": "Puerto Rico had documented island-wide blackouts in this period: a power-plant fire in September 2016, Hurricanes Irma and Maria in September 2017 (full restoration took about 11 months), earthquakes in January 2020, and Hurricane Fiona in September 2022. A dip followed by a rise can mean disruption and recovery, not growth.",
+    "investigate": "Do these events appear in the annual values at all — or does a yearly average smooth them away? Who lived through the slowest restorations, and where?",
+    "evidence": "supported_by_source",
+    "evidenceNote": "The sources below document that these outages happened. Whether and how they appear in this case study's annual values has not yet been tested.",
+    "citations": [
+      { "label": "NASA Earth Observatory — Puerto Rico goes dark (2016)", "url": "https://earthobservatory.nasa.gov/images/88796/puerto-rico-goes-dark" },
+      { "label": "NASA SVS — Black Marble view of Puerto Rico after Hurricane Maria (2017)", "url": "https://svs.gsfc.nasa.gov/12616/" },
+      { "label": "WLRN/NPR — 11 months after Maria, officials say all power restored (2018)", "url": "https://www.wlrn.org/post/11-months-after-hurricane-maria-hit-puerto-rico-officials-say-all-power-restored" },
+      { "label": "U.S. EIA — Earthquakes damage Costa Sur power plant (2020)", "url": "https://www.eia.gov/todayinenergy/detail.php?id=44216" },
+      { "label": "U.S. DOE — Hurricane Fiona situation update (2022)", "url": "https://www.energy.gov/sites/default/files/2022-09/TLP-CLEAR_Fiona_DOE%20Situation%20Update_10_Final%20CLEAN.pdf" }
+    ]
+  },
+  {
+    "id": "rebuilding",
+    "title": "Rebuilding, electrification or construction",
+    "description": "Repairs and rebuilding after the hurricanes, new grid equipment, or new buildings and roads could add or restore light.",
+    "investigate": "Where was the grid rebuilt, and was it rebuilt to the same pattern? Who decided where light came back first?",
     "evidence": "local_investigation"
   },
   {
     "id": "lighting-policy",
     "title": "Lighting technology or public-lighting policy changed",
-    "description": "A switch to LED street lights, longer lighting hours, or a new lighting rule can change recorded brightness — up or down — without a change in activity.",
-    "investigate": "Were street lights replaced, or did lighting hours change, during this period?",
+    "description": "Replacing street lights — for example with LEDs — or changing lighting hours can change recorded brightness, up or down, without any change in activity.",
+    "investigate": "Were public lights replaced or repaired differently after the storms?",
     "evidence": "local_investigation"
   },
   {
-    "id": "outage-recovery",
-    "title": "Power outage, disaster, conflict, or recovery",
-    "description": "A dip followed by a rise could reflect disruption and recovery rather than steady growth.",
-    "investigate": "Did anything interrupt power or daily life in the year of the dip?",
-    "evidence": "local_investigation"
-  },
-  {
-    "id": "seasonal",
-    "title": "Seasonal or temporary activity",
-    "description": "Harvests, festivals, temporary camps, or construction sites can be bright for part of a year and still raise the annual value.",
-    "investigate": "Is light here steady through the year, or concentrated in certain months?",
+    "id": "population-activity",
+    "title": "Changes in who lives here and how places are used",
+    "description": "People moving away or returning, homes left empty, or changes in work and tourism could all change how much light a place gives off.",
+    "investigate": "Did the number of occupied homes or the pattern of night-time activity change over the period?",
     "evidence": "local_investigation"
   },
   {
     "id": "non-settlement",
-    "title": "Vehicle lights, fires, or other non-settlement light sources",
-    "description": "Highways, industrial sites, gas flares, and fires can all be recorded as night-time light.",
-    "investigate": "What lies inside the grid cells that changed most — homes, a road, a factory?",
+    "title": "Generators, vehicles, ports, or other non-home light sources",
+    "description": "Power plants, ports, highways, industrial sites and large backup generators can all be recorded as night-time light.",
+    "investigate": "What lies inside the grid cells that changed most — homes, a road, a port, a plant?",
     "evidence": "data_consideration"
   },
   {
     "id": "coverage",
-    "title": "Limited data coverage or processing difference",
-    "description": "Years with few cloud-free nights, or a change in product version or correction method, can shift values on their own.",
-    "investigate": "How many valid observations support each year, and did the processing change?",
+    "title": "Cloud cover or processing differences",
+    "description": "Years with few cloud-free nights, or differences in how the provider screened and combined observations, can shift values on their own.",
+    "investigate": "How many cloud-free observations support each year, and did the product version or method change?",
     "evidence": "data_consideration"
   }
 ]

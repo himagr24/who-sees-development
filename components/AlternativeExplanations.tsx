@@ -41,10 +41,17 @@ export default function AlternativeExplanations({ items }: { items: Explanation[
                 <span className="text-muted">To investigate: </span>
                 {x.investigate}
               </p>
-              {x.citation && (
-                <a href={x.citation.url} className="mt-2 inline-flex items-center gap-1 text-xs text-glow underline">
-                  {x.citation.label} <ExternalLink aria-hidden className="h-3 w-3" />
-                </a>
+              {x.evidenceNote && <p className="mt-3 text-xs text-muted">{x.evidenceNote}</p>}
+              {x.citations && x.citations.length > 0 && (
+                <ul className="mt-2 space-y-1">
+                  {x.citations.map((c) => (
+                    <li key={c.url}>
+                      <a href={c.url} className="inline-flex items-start gap-1 text-xs text-glow underline hover:text-ink">
+                        {c.label} <ExternalLink aria-hidden className="mt-0.5 h-3 w-3 shrink-0" />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               )}
             </li>
           );

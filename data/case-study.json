@@ -1,62 +1,387 @@
 {
   "status": "demo",
-  "title": "A brighter decade? One area, 2014–2024",
-  "placeName": "Example study area (not yet selected)",
-  "country": "To be confirmed",
-  "coordinates": { "lat": 0, "lng": 0 },
-  "selectionReason": "Demo content — replace with verified public data. Record why this place was chosen, who chose it, and whether people connected to it were consulted.",
-  "period": { "start": 2014, "end": 2024 },
-  "question": "Observed night-time light in this area changed over ten years. What could that mean — and what can it not tell us?",
-  "summary": "This demo case study shows how the observatory presents one area's night-time-light record. The numbers are illustrative placeholders, shaped to show a typical pattern: a general rise, a dip, and a year with no usable value.",
+  "title": "Puerto Rico at night, 2014–2024",
+  "placeName": "Puerto Rico (main island, Vieques and Culebra)",
+  "country": "Puerto Rico (United States territory)",
+  "coordinates": {
+    "lat": 18.2,
+    "lng": -66.5
+  },
+  "selectionReason": "Chosen by the project author because night-time light in Puerto Rico changed for reasons that are well documented and are not 'development': island-wide blackouts in 2016, 2017, 2020 and 2022, and a long recovery after Hurricane Maria. That makes it a clear test of the observatory's question. Puerto Rico is not connected to any previous project. No people living in or connected to Puerto Rico have been consulted yet; that would be part of any further work.",
+  "period": {
+    "start": 2014,
+    "end": 2024
+  },
+  "question": "Puerto Rico's night-time light went dark several times in ten years and came back. What does a brighter or darker island mean — and who gets to decide?",
+  "summary": "Puerto Rico has been selected as the public case study. The place, period, sources and documented events below are real. The chart and grid still show placeholder demo values until the yearly satellite data has been downloaded and processed.",
   "dataset": {
-    "name": "VIIRS Nighttime Lights (VNL), annual composites — intended source",
+    "name": "VIIRS Nighttime Lights (VNL) Version 2.2, annual composites — average-masked radiance",
     "provider": "Earth Observation Group, Payne Institute for Public Policy, Colorado School of Mines",
     "productUrl": "https://eogdata.mines.edu/products/vnl/",
     "sensor": "VIIRS Day/Night Band (Suomi NPP satellite)",
     "resolution": "15 arc-second grid — roughly 450–500 m across near the equator. One cell can cover several streets, fields, or a whole village.",
     "unit": "nW/cm²/sr (nanowatts per square centimetre per steradian)",
     "temporalAggregation": "One value per year, built from many night-time passes",
-    "processingSummary": "Demo summary — confirm against provider documentation. Annual products are assembled from many nightly observations after screening for cloud, moonlight, stray light and other effects. For this case study, the values would then be averaged over the selected area.",
-    "license": "To be confirmed on the provider page before publication"
+    "processingSummary": "The provider builds each annual value from monthly averages of nightly observations, screened for cloud, moonlight, stray light and other effects; the 'masked' layer also removes background and short-lived lights such as fires (Elvidge et al., 2021). For this case study, the values are averaged over a fixed box around Puerto Rico by scripts/prepare_case_study.py.",
+    "license": "Described in the Google Earth Engine catalogue as public domain with no restrictions on use or distribution; confirm on the provider's site before publication."
   },
   "coverage": {
-    "level": "limited",
-    "explanation": "Demo content. Some years in this series are marked limited or unknown to show how the observatory discloses uneven coverage. In a verified case study, this label would come from the product's cloud-free / valid-observation counts.",
-    "validObservationNote": "Demo content — replace with the number of valid (cloud-free) observations per year from the source product."
+    "level": "unknown",
+    "explanation": "Coverage has not been measured yet. Once the data is processed, each year will be labelled from the number of cloud-free observations (the provider's cf_cvg layer).",
+    "validObservationNote": "Pending — computed by scripts/prepare_case_study.py from the cf_cvg layer."
   },
   "series": [
-    { "year": 2014, "value": 3.1, "quality": "high" },
-    { "year": 2015, "value": 3.3, "quality": "high" },
-    { "year": 2016, "value": 3.2, "quality": "limited" },
-    { "year": 2017, "value": 3.8, "quality": "high" },
-    { "year": 2018, "value": 4.1, "quality": "high" },
-    { "year": 2019, "value": 4.0, "quality": "limited" },
-    { "year": 2020, "value": 3.6, "quality": "high" },
-    { "year": 2021, "value": 4.4, "quality": "high" },
-    { "year": 2022, "value": 4.9, "quality": "high" },
-    { "year": 2023, "value": 5.2, "quality": "high" },
-    { "year": 2024, "value": null, "quality": "unknown" }
+    {
+      "year": 2014,
+      "value": 3.1,
+      "quality": "high"
+    },
+    {
+      "year": 2015,
+      "value": 3.3,
+      "quality": "high"
+    },
+    {
+      "year": 2016,
+      "value": 3.2,
+      "quality": "limited"
+    },
+    {
+      "year": 2017,
+      "value": 3.8,
+      "quality": "high"
+    },
+    {
+      "year": 2018,
+      "value": 4.1,
+      "quality": "high"
+    },
+    {
+      "year": 2019,
+      "value": 4.0,
+      "quality": "limited"
+    },
+    {
+      "year": 2020,
+      "value": 3.6,
+      "quality": "high"
+    },
+    {
+      "year": 2021,
+      "value": 4.4,
+      "quality": "high"
+    },
+    {
+      "year": 2022,
+      "value": 4.9,
+      "quality": "high"
+    },
+    {
+      "year": 2023,
+      "value": 5.2,
+      "quality": "high"
+    },
+    {
+      "year": 2024,
+      "value": null,
+      "quality": "unknown"
+    }
   ],
   "comparison": {
-    "note": "Conceptual comparison generated for the demo. It is not a map of real pixel values and does not show any real place.",
+    "note": "Placeholder demo grid — this is not Puerto Rico. It will be replaced by a coarse average of the real data.",
     "cellSizeLabel": "Each square stands in for one ~500 m grid cell",
-    "grids": {"2014":[[0.4,0.6,0.6,0.8,0.5,0.7,0.4,0.3,0.3,0.6],[0.7,0.7,1,1.3,1.3,1.1,0.8,0.5,0.4,0.6],[0.6,1.1,1.9,3,3,2,1,0.8,0.3,0.4],[0.8,1.6,3.4,5.1,5.2,3.4,1.8,1,0.5,0.5],[0.9,2,4.2,6.2,6.1,4.2,2.5,1.4,0.8,0.7],[0.8,1.7,3.4,5.2,5.2,3.9,2.8,2.4,1.5,0.7],[0.7,1.2,2,3,3.2,3,3.3,3.6,2.7,1.4],[0.5,0.7,1.1,1.5,1.4,2,2.8,3.5,2.8,1.3],[0.3,0.3,0.5,0.8,0.8,0.9,1.6,2.1,1.6,0.8],[0.4,0.3,0.6,0.4,0.5,0.6,0.7,0.8,0.8,0.5]],"2023":[[0.6,1.2,1.5,1.9,1.6,1.6,1,0.6,0.4,0.6],[1.3,1.9,2.8,3.4,3.5,2.9,2,1.1,0.7,0.6],[1.7,3.1,4.6,5.9,6,4.7,3.1,2,0.9,0.6],[2.3,4.1,6.4,8.3,8.4,6.6,4.7,2.9,1.5,0.9],[2.5,4.6,7.3,9.3,9.4,7.9,6.1,4.1,2.5,1.6],[2.3,4.1,6.5,8.5,8.8,8.1,6.8,5.5,3.7,2],[1.8,3.2,4.6,6.1,6.8,7.1,7,6.4,4.9,2.9],[1.1,1.9,2.9,3.8,4.2,5.2,5.7,5.8,4.8,2.8],[0.6,0.9,1.4,2,2.4,2.9,3.8,4.1,3.2,2],[0.5,0.5,0.9,0.8,1.2,1.6,1.9,2,1.8,1.1]]}
+    "grids": {
+      "2014": [
+        [
+          0.4,
+          0.6,
+          0.6,
+          0.8,
+          0.5,
+          0.7,
+          0.4,
+          0.3,
+          0.3,
+          0.6
+        ],
+        [
+          0.7,
+          0.7,
+          1,
+          1.3,
+          1.3,
+          1.1,
+          0.8,
+          0.5,
+          0.4,
+          0.6
+        ],
+        [
+          0.6,
+          1.1,
+          1.9,
+          3,
+          3,
+          2,
+          1,
+          0.8,
+          0.3,
+          0.4
+        ],
+        [
+          0.8,
+          1.6,
+          3.4,
+          5.1,
+          5.2,
+          3.4,
+          1.8,
+          1,
+          0.5,
+          0.5
+        ],
+        [
+          0.9,
+          2,
+          4.2,
+          6.2,
+          6.1,
+          4.2,
+          2.5,
+          1.4,
+          0.8,
+          0.7
+        ],
+        [
+          0.8,
+          1.7,
+          3.4,
+          5.2,
+          5.2,
+          3.9,
+          2.8,
+          2.4,
+          1.5,
+          0.7
+        ],
+        [
+          0.7,
+          1.2,
+          2,
+          3,
+          3.2,
+          3,
+          3.3,
+          3.6,
+          2.7,
+          1.4
+        ],
+        [
+          0.5,
+          0.7,
+          1.1,
+          1.5,
+          1.4,
+          2,
+          2.8,
+          3.5,
+          2.8,
+          1.3
+        ],
+        [
+          0.3,
+          0.3,
+          0.5,
+          0.8,
+          0.8,
+          0.9,
+          1.6,
+          2.1,
+          1.6,
+          0.8
+        ],
+        [
+          0.4,
+          0.3,
+          0.6,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.8,
+          0.5
+        ]
+      ],
+      "2023": [
+        [
+          0.6,
+          1.2,
+          1.5,
+          1.9,
+          1.6,
+          1.6,
+          1,
+          0.6,
+          0.4,
+          0.6
+        ],
+        [
+          1.3,
+          1.9,
+          2.8,
+          3.4,
+          3.5,
+          2.9,
+          2,
+          1.1,
+          0.7,
+          0.6
+        ],
+        [
+          1.7,
+          3.1,
+          4.6,
+          5.9,
+          6,
+          4.7,
+          3.1,
+          2,
+          0.9,
+          0.6
+        ],
+        [
+          2.3,
+          4.1,
+          6.4,
+          8.3,
+          8.4,
+          6.6,
+          4.7,
+          2.9,
+          1.5,
+          0.9
+        ],
+        [
+          2.5,
+          4.6,
+          7.3,
+          9.3,
+          9.4,
+          7.9,
+          6.1,
+          4.1,
+          2.5,
+          1.6
+        ],
+        [
+          2.3,
+          4.1,
+          6.5,
+          8.5,
+          8.8,
+          8.1,
+          6.8,
+          5.5,
+          3.7,
+          2
+        ],
+        [
+          1.8,
+          3.2,
+          4.6,
+          6.1,
+          6.8,
+          7.1,
+          7,
+          6.4,
+          4.9,
+          2.9
+        ],
+        [
+          1.1,
+          1.9,
+          2.9,
+          3.8,
+          4.2,
+          5.2,
+          5.7,
+          5.8,
+          4.8,
+          2.8
+        ],
+        [
+          0.6,
+          0.9,
+          1.4,
+          2,
+          2.4,
+          2.9,
+          3.8,
+          4.1,
+          3.2,
+          2
+        ],
+        [
+          0.5,
+          0.5,
+          0.9,
+          0.8,
+          1.2,
+          1.6,
+          1.9,
+          2,
+          1.8,
+          1.1
+        ]
+      ]
+    }
   },
   "observedChange": {
-    "statement": "Observed average radiance in the selected area increased between 2014 and 2023, with a dip in 2020. No usable value is available for 2024 in this demo series.",
+    "statement": "Placeholder: real values for Puerto Rico have not been processed yet, so no change is stated here. The chart below shows illustrative demo values only.",
     "status": "measurement",
-    "caveat": "This does not establish why it changed or what that change meant for people living there."
+    "caveat": "Even once real values are shown, they will not establish why light changed or what that change meant for people living there."
   },
   "limitations": [
-    "Annual composites can hide short-lived events such as outages, festivals, or seasonal activity.",
+    "Annual composites can hide short-lived events. An outage lasting weeks or months may barely move a yearly value.",
     "Products are corrected for cloud, moonlight, snow, stray light and other effects; those corrections can differ between years and product versions.",
-    "Spatial resolution is coarse: one grid cell can mix homes, roads, industry and open land.",
-    "Light can come from many sources — streets, vehicles, industry, fires, gas flares — not only homes.",
+    "Spatial resolution is coarse: one grid cell (about 450 m across) can mix homes, roads, industry and open land.",
+    "Light can come from many sources — streets, vehicles, ports, power plants, backup generators — not only homes.",
     "A change in lighting technology (for example, a switch to LEDs) can change the recorded value without any change in activity.",
-    "Demo content — replace with limitations documented for the verified dataset and area."
+    "The selected box includes ocean, which lowers the average radiance; the same box is used every year, so years remain comparable.",
+    "NASA cautions that its night-light outage maps should not be used to monitor outages at the level of individual buildings or roads.",
+    "Demo content — the chart and grid values are placeholders until the data is processed."
   ],
   "sourceLinks": [
-    { "label": "Earth Observation Group — VIIRS Nighttime Lights", "url": "https://eogdata.mines.edu/products/vnl/" },
-    { "label": "NASA Black Marble User Guide (v1.2)", "url": "https://viirsland.gsfc.nasa.gov/PDF/BlackMarbleUserGuide_v1.2_20210421.pdf" }
+    {
+      "label": "Earth Observation Group — VIIRS Nighttime Lights (data provider)",
+      "url": "https://eogdata.mines.edu/products/vnl/"
+    },
+    {
+      "label": "Elvidge et al. (2021) — Annual time series of global VIIRS nighttime lights derived from monthly averages. Remote Sensing 13(5), 922",
+      "url": "https://doi.org/10.3390/rs13050922"
+    },
+    {
+      "label": "Google Earth Engine catalogue — VIIRS Nighttime Day/Night Annual Band Composites V2.2",
+      "url": "https://developers.google.com/earth-engine/datasets/catalog/NOAA_VIIRS_DNB_ANNUAL_V22"
+    },
+    {
+      "label": "NASA Black Marble User Guide (v1.2)",
+      "url": "https://viirsland.gsfc.nasa.gov/PDF/BlackMarbleUserGuide_v1.2_20210421.pdf"
+    },
+    {
+      "label": "NASA SVS — Black Marble view of Puerto Rico after Hurricane Maria",
+      "url": "https://svs.gsfc.nasa.gov/12616/"
+    },
+    {
+      "label": "NASA Earth Observatory — Puerto Rico goes dark (2016)",
+      "url": "https://earthobservatory.nasa.gov/images/88796/puerto-rico-goes-dark"
+    }
+  ],
+  "bbox": [
+    -67.3,
+    17.85,
+    -65.2,
+    18.55
   ]
 }

@@ -67,9 +67,16 @@ export default function SignalExplorer({ caseStudy }: { caseStudy: CaseStudy }) 
         </p>
       )}
 
-      <div className="mt-4 grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto]">
+      <div
+        className={`mt-4 grid gap-4 ${
+          grid[0].length > grid.length ? "" : "sm:grid-cols-[minmax(0,1fr)_auto]"
+        }`}
+      >
         <div
-          className="relative mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-md border border-line"
+          className={`relative mx-auto w-full overflow-hidden rounded-md border border-line ${
+            grid[0].length > grid.length ? "" : "max-w-sm"
+          }`}
+          style={{ aspectRatio: `${grid[0].length} / ${grid.length}` }}
           role="img"
           aria-label={`Grid of ${grid.length} by ${grid[0].length} cells for ${year}. Mean cell value ${mean.toFixed(
             1,
@@ -93,7 +100,11 @@ export default function SignalExplorer({ caseStudy }: { caseStudy: CaseStudy }) 
           </span>
         </div>
 
-        <div className="flex flex-col gap-4 text-xs text-muted sm:w-40">
+        <div
+          className={`gap-4 text-xs text-muted ${
+            grid[0].length > grid.length ? "grid grid-cols-2 sm:grid-cols-4" : "flex flex-col sm:w-40"
+          }`}
+        >
           <div>
             <p className="text-ink-soft">Value scale</p>
             <div

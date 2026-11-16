@@ -53,6 +53,10 @@ export default function ExplorePage() {
             <h1 className="mt-2 text-3xl text-ink sm:text-5xl">{cs.title}</h1>
             <p className="mt-4 font-serif text-xl text-ink-soft">{cs.question}</p>
             <p className="mt-3 text-ink-soft">{cs.summary}</p>
+            <details className="mt-4 rounded-lg border border-line bg-panel text-sm">
+              <summary className="cursor-pointer px-4 py-2.5 text-ink hover:text-glow">Why this place?</summary>
+              <p className="px-4 pb-4 text-ink-soft">{cs.selectionReason}</p>
+            </details>
           </header>
 
           <section aria-labelledby="shows-heading" className="rounded-xl border border-glow/40 bg-panel p-5 sm:p-6">

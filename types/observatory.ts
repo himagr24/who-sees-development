@@ -70,7 +70,9 @@ export type Explanation = {
   description: string;
   investigate: string;
   evidence: EvidenceLabel;
-  citation?: { label: string; url: string };
+  /** What the linked sources support — and what they do not. */
+  evidenceNote?: string;
+  citations?: Array<{ label: string; url: string }>;
 };
 
 export type ChainStep = {

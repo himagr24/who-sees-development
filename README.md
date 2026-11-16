@@ -9,7 +9,7 @@ Satellites can reveal changing patterns of light at night. Those patterns are of
 This prototype is being developed as part of an application to the Mozilla Foundation Embedded Fellowship with LAS Art Foundation.
 
 > [!IMPORTANT]
-> **The case-study values in this version are demo content.** The interface, data-care rules and source documentation are real; the place, numbers and example contributions are illustrative placeholders, and are labelled as such throughout the site. See [What is real and what is demo](#what-is-real-and-what-is-demo).
+> **The case-study values in this version are demo content.** The case study is Puerto Rico, 2014–2024. The place, sources and documented events are real; the chart values, comparison grid and example contributions are still illustrative placeholders, and are labelled as such throughout the site. See [What is real and what is demo](#what-is-real-and-what-is-demo).
 
 ---
 
@@ -66,7 +66,8 @@ These are never merged into a single truth or confidence score.
 |---|---|
 | Interface, inference chain, knowledge layers, data-care rules | Real |
 | Dataset description (VIIRS Nighttime Lights, Earth Observation Group) | Describes the *intended* source; to be confirmed before publication |
-| Place, series values, comparison grid, coverage labels | **Demo** |
+| Place: Puerto Rico, 2014–2024, with documented island-wide blackouts in 2016, 2017, 2020 and 2022 | Real, with linked sources |
+| Series values, comparison grid, coverage labels | **Demo** — until the data-preparation script is run on downloaded data |
 | Example contributions | **Illustrative** — written for the prototype, not from real people |
 | References | Real, linked sources |
 
@@ -94,6 +95,7 @@ components/     UI components — chart, data card, inference chain, form, …
 data/           Case study, explanations, inference chain, example contributions (JSON)
 types/          Content model (TypeScript)
 lib/            Typed loaders for the JSON content
+scripts/        Data-preparation script (Python)
 docs/           Project brief, build brief, research notes, implementation notes
 ```
 
@@ -101,7 +103,7 @@ Built with Next.js, TypeScript, Tailwind CSS, Recharts and Lucide icons.
 
 ## Replacing the demo with a verified case study
 
-All case-study content comes from [`data/case-study.json`](data/case-study.json), so real data can be added without changing the interface. Setting `"status": "verified"` removes the demo labels — do this only once every field has been filled from a public, citable source. The full list of fields to replace is in [`docs/IMPLEMENTATION_NOTES.md`](docs/IMPLEMENTATION_NOTES.md).
+All case-study content comes from [`data/case-study.json`](data/case-study.json), so real data can be added without changing the interface. [`scripts/prepare_case_study.py`](scripts/prepare_case_study.py) computes the yearly values from Earth Observation Group VIIRS data; [`docs/DATA_PREPARATION.md`](docs/DATA_PREPARATION.md) explains how to download the data and run it. Setting `"status": "verified"` removes the demo labels — do this only once every field has been filled from a public, citable source. The full list of fields to replace is in [`docs/IMPLEMENTATION_NOTES.md`](docs/IMPLEMENTATION_NOTES.md).
 
 ## Accessibility
 
@@ -120,6 +122,7 @@ Keyboard-operable inference chain and form, visible focus states, quality and kn
 - [`docs/COMMUNITY_SATELLITE_RESEARCH.md`](docs/COMMUNITY_SATELLITE_RESEARCH.md) — research on community-centred satellite imagery
 - [`docs/BUILD_BRIEF.md`](docs/BUILD_BRIEF.md) — the full product and build specification
 - [`docs/IMPLEMENTATION_NOTES.md`](docs/IMPLEMENTATION_NOTES.md) — design decisions, known gaps and data-replacement guide
+- [`docs/DATA_PREPARATION.md`](docs/DATA_PREPARATION.md) — downloading the satellite data and running the preparation script
 
 ## Key sources
 
